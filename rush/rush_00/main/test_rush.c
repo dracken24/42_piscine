@@ -1,0 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test_rush.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nadesjar <nadesjar@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/26 14:00:50 by nadesjar          #+#    #+#             */
+/*   Updated: 2022/02/26 14:33:09 by nadesjar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+void	ft_putchar(char x);
+
+void	print(int x, int first, int middle, int last)
+{
+	int	letter;
+
+	letter = 2;
+	ft_putchar(first);
+	while (letter < x)
+	{
+		ft_putchar(middle);
+		letter++;
+	}
+	ft_putchar(last);
+	ft_putchar('\n');
+}
+
+int	rush(int x, int y)
+{
+	int	line;
+
+	line = 2;
+	if (x < 1 || y < 1)
+		return (0);
+	print(x, 'A', 'B', 'C');
+	while (y >= 2 && line < y)
+	{
+		print(x, 'B', ' ', 'B');
+		line++;
+	}
+	print(x, 'A', 'B', 'C');
+	return (0);
+}
