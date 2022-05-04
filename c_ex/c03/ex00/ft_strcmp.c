@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nadesjar <nadesjar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 11:56:13 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/02/28 12:44:17 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/05/03 23:58:32 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *str1, char *str2)
 {
-	while (*s1 != '\0' && (*s1 == *s2))
+	while (*str1 != '\0' && (*str1 == *str2))
 	{
-		s1++;
-		s2++;
+		str1++;
+		str2++;
 	}
-	return (*s1 - *s2);
+	return (*str1 - *str2);
 }
